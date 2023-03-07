@@ -1,0 +1,24 @@
+<% for(var i=0 ; i<users.length;i++){ %>
+    <tr>
+        <td>
+            <%=i +1%>
+        </td>
+        <td>
+            <%=users[i].toy%>
+        </td>
+        <td>
+            $<%=users[i].price%>
+        </td>
+        <td>
+            <%=users[i].status%>
+        </td>
+        <td>
+            <a class="btn update button-verify" href="/update-user?id=<%= users[i]._id%>">
+                Edit
+            </a>
+            <a class="btn delete button-alert" data-id=<%=users[i]._id%> >
+                Remove
+            </a>
+        </td>
+    </tr>
+    <% }%>
